@@ -1,12 +1,10 @@
 import  Counter from './components/Counter'
-import BaseButton from './components/Buttons/BaseButton'
-import PrettyButton from './components/Buttons/PrettyButton'
-import FunctionalButton from './components/Buttons/FunctionalButton'
+import { BaseButton, PrettyButton, FunctionalButton } from './components/Buttons'
 
 const counter = new Counter(document.getElementById("counter"));
 
-//const baseBtn = new BaseButton('footer', 'base');
-//baseBtn.render();
+const baseBtn = new BaseButton('footer', 'base');
+baseBtn.render();
 
 const prettyBtn = new PrettyButton('footer', 'pretty', 'pretty-btn');
 prettyBtn.render();
