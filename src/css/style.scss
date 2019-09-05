@@ -12,3 +12,20 @@ body {
     @import './app/about.scss';
     @import './app/footer.scss';
 }
+
+.pretty-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(5, 51, 150);
+    color: #fff;
+    margin: 10px 5px;
+    transition: all .5s;
+    box-shadow: 3px 3px 3px rgba($color: #000, $alpha: 0.452);
+
+    &:focus {
+        transition: all .5s ease-in;
+        box-shadow: 1px 1px 1px rgba($color: #000, $alpha: 0.192);
+    }
+}
