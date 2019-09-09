@@ -31,16 +31,21 @@ DomWorker.mount(
 )
 
 const brush = {
+  color: '',
   createComponent: () => { console.log('Я создатель') },
-  render: (canvas) => {
+  render: function(canvas) {
     canvas.style.width = '400px';
     canvas.style.height = '250px';
-    canvas.style.backgroundColor = 'green';
+    canvas.style.backgroundColor = color;
+  },
+  setColor: function(color) {
+      this.color = color;
+      return this;
   }  
 };
 
 DomWorker.mount(
-    brush,
+    brush.setColor('red'),
     document.getElementById('other')
 )
 
